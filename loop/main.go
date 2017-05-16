@@ -8,5 +8,3 @@ func main() {
 		fmt.Printf("%d \t\t %b \t\t %x \t\t %q \n", i, i, i, i)
 	}
 }
-
-
