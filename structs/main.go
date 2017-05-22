@@ -19,8 +19,7 @@ func main() {
 	// Creating 2 person structs
 	person := Person{"James", "Bond", 50}
 	badPerson := BadPerson{
-		Person:    Person{"Clark", "Kent", 30},
-		firstName: "Bad Clark",
+		Person: Person{"Bad Clark", "Kent", 30},
 	}
 
 	fmt.Println(person.firstName, person.lastName, person.age)
@@ -29,5 +28,5 @@ func main() {
 	// the one which can be accessed with "person.first". To get to the inner struct's field, we need to use
 	// "badPerson.Person.firstName", whereas there is no "lastName" field in the "BadPerson" struct, so the inner
 	// struct's "lastName" field is promoted and accessible via "badPerson.lastName" instead of "badPerson.Person.lastName".
-	fmt.Println(badPerson.Person.firstName, badPerson.firstName, badPerson.lastName, badPerson.age)
+	fmt.Println(badPerson.Person.firstName, badPerson.lastName, badPerson.age)
 }
