@@ -17,7 +17,7 @@ type badPerson struct {
 
 // This is a method for the struct Person
 func (p Person) fullName() string {
-	return p.firstName + "" + p.lastName
+	return p.firstName + " " + p.lastName
 }
 
 func main() {
