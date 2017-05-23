@@ -10,7 +10,7 @@ func main() {
 	// If the capacity gets exceeded, a new slice will be created with
 	// the capacity of 4 and so on. This could cost performance issues at
 	// some point
-	fmt.Println("Directly made slice")
+	fmt.Println("Slice made with shorthand notation")
 	someSlice := []string{"Good morning", "Guten Morgen", "Goeden dag"}
 	fmt.Println(someSlice)
 	fmt.Println(len(someSlice))
