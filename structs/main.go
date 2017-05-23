@@ -2,23 +2,28 @@ package main
 
 import "fmt"
 
-func main() {
-	// A struct would be something like a class in other languages
-	type Person struct {
-		// These attributes are called fields in Go
-		firstName string
-		lastName  string
-		age       int
-	}
+// A struct would be something like a class in other languages
+type Person struct {
+	// These attributes are called fields in Go
+	firstName string
+	lastName  string
+	age       int
+}
 
-	type BadPerson struct {
-		Person
-		firstName string
-	}
+type badPerson struct {
+	Person
+	firstName string
+}
+
+func (p Person) fullName() string {
+	return p.firstName + "" + p.lastName
+}
+
+func main() {
 
 	// Creating 2 person structs
 	person := Person{"James", "Bond", 50}
-	badPerson := BadPerson{
+	badPerson := badPerson{
 		Person: Person{"Bad Clark", "Kent", 30},
 	}
 
@@ -29,4 +34,5 @@ func main() {
 	// "badPerson.Person.firstName", whereas there is no "lastName" field in the "BadPerson" struct, so the inner
 	// struct's "lastName" field is promoted and accessible via "badPerson.lastName" instead of "badPerson.Person.lastName".
 	fmt.Println(badPerson.Person.firstName, badPerson.lastName, badPerson.age)
+
 }
