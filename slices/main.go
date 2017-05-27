@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	// This first slice has a length of 3 and a capacity of 3
-	// If the capacity gets exceeded, a new slice will be created with
+	// This first slice has a length of 3 and a capacity of 3, since we initialized it
+	// with 3 values. If the capacity gets exceeded, a new slice will be created with
 	// the capacity of 4 and so on. This could cost performance issues at
 	// some point
 	fmt.Println("Slice made with shorthand notation")
